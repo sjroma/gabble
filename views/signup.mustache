@@ -8,23 +8,37 @@
 </head>
 
 <body>
-	<nav>
+	<nav class="nav_container">
 		<ul class="nav-row">
 			<li class="nav-item_home">
-				<a href="index.html">Gabble</a>
+				<a href="index.mustache">Gabble</a>
 			</li>
 			<li class="nav-item_create">
-				<a href="calendar/index.html">Create a new Gab</a>
+				<a href="createnewgab.mustache">Create a new Gab</a>
 			</li>
 			<li class="nav-item_login">
-				<a href="join/index.html">Logged in as</a>
+				<a href="login.mustache">Logged in as</a>
 			</li>
 			<li class="nav-item_signup">
-				<a href="join/index.html">Sign Up</a>
+				<a href="signup.mustache">Sign Up</a>
 			</li>
 		</ul>
 	</nav>
 
+	<h1>Create your Gabble identity:</h1>
+	<div class="container">
+		<form class="form_container" action="/signup" method="post">
+			<label for="name">userId</label>
+			<input type="text" name="user_name" id="user_Name" value="" placeholder="userid">
+			<label for="password">password</label>
+			<input type="password" name="password" id="pwd" value="" placeholder="password">
+			<label for="password">confirm password</label>
+			<input type="password" name="password_val" id="pwd" value="" placeholder="password-confirm">
+			<label for="name">Screen name</label>
+			<input type="text" name="display_name" id="disp_name" value="" placeholder="nickname">
+			<input type="submit" id="submit_button" value="Sign Up">
+		</form>
+	</div>
 </body>
 
 </html>

@@ -4,27 +4,39 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="main.css">
-	<title>Mystery Word</title>
+	<title>Gabble</title>
 </head>
 
 <body>
-	<nav>
+	<nav class="nav_container">
 		<ul class="nav-row">
 			<li class="nav-item_home">
-				<a href="index.html">Gabble</a>
+				<a href="index.mustache">Gabble</a>
 			</li>
 			<li class="nav-item_create">
-				<a href="calendar/index.html">Create a new Gab</a>
+				<a href="createnewgab.mustache">Create a new Gab</a>
 			</li>
 			<li class="nav-item_login">
-				<a href="join/index.html">Logged in as</a>
+				<a href="login.mustache">Logged in as {{disp_name}}</a>
 			</li>
 			<li class="nav-item_signup">
-				<a href="join/index.html">Sign Up</a>
+				<a href="signup.mustache">Sign Up</a>
 			</li>
 		</ul>
 	</nav>
 
+	<div class="gab_container">
+		<form class="form_container" action="/createnewgab" method="post">
+			<div class="gab">
+				<label for="gab">Create a new Gab</label>
+				<br>
+				<textarea name="gab" id="gab" cols="50" rows="3"></textarea>
+			</div>
+			<div class="submit_container">
+				<input type="submit" id="submit_button" value="Save gab">
+			</div>
+		</form>
+	</div>
 </body>
 
 </html>

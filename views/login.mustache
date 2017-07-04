@@ -8,23 +8,33 @@
 </head>
 
 <body>
-	<nav>
+	<nav class="nav_container">
 		<ul class="nav-row">
 			<li class="nav-item_home">
-				<a href="index.html">Gabble</a>
+				<a href="index.mustache">Gabble</a>
 			</li>
 			<li class="nav-item_create">
-				<a href="calendar/index.html">Create a new Gab</a>
+				<a href="createnewgab.mustache">Create a new Gab</a>
 			</li>
 			<li class="nav-item_login">
-				<a href="join/index.html">Logged in as</a>
+				<a href="login.mustache">Logged in as</a>
 			</li>
 			<li class="nav-item_signup">
-				<a href="join/index.html">Sign Up</a>
+				<a href="signup.mustache">Sign Up</a>
 			</li>
 		</ul>
 	</nav>
 
-</body>
+	<h1>Log in</h1>
+	<div class="container">
+		<form class="form_container" action="/login" method="post">
+			<label for="name">userId</label>
+			<input type="text" name="user_name" id="user_Name" value="" placeholder="">
+			<label for="password">password</label>
+			<input type="password" name="password" id="pwd" value="" placeholder="">
+			<input type="submit" id="submit_button" value="Log in">
+		</form>
+	</div>
 
+</body>
 </html>
