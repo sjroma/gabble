@@ -2,7 +2,7 @@
   "name": "gabble",
   "version": "1.0.0",
   "description": "messages with comments chat",
-  "main": "index.js",
+  "main": "gabbleapp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

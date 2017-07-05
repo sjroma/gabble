@@ -18,7 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(expressValidator());
 
-
+app.get('/', function(req, res) {
+	res.render('login')  //redirect so user is required to login to continue
+});
 
 
 app.listen(3000, function () {
