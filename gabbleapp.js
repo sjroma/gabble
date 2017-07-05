@@ -11,15 +11,24 @@ var app = express();
 app.engine('mustache', mustacheExpress());
 app.set('views', './views');
 app.set('view engine', 'mustache');
+
+app.use(session({
+	secret: 'calico',
+	resave: false,
+	saveUninitialized: true,
+}))
+
 app.use(express.static('public'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(expressValidator());
+app.use('/admin', adminRouter)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 
-app.get('/', function(req, res) {
-	res.render('login')  //redirect so user is required to login to continue
+
+app.get('/', function (req, res) {
+	res.render('login') //redirect so user is required to login to continue
 });
 
 
